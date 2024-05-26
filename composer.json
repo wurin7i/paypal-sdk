@@ -1,0 +1,23 @@
+{
+    "name": "wurin7i/paypal-sdk",
+    "description": "(Incomplete) PayPal API client on SaloonPHP",
+    "type": "library",
+    "require": {
+        "php": "^8.1",
+        "saloonphp/saloon": "^3.0",
+        "saloonphp/laravel-plugin": "^3.0",
+        "spatie/laravel-data": "^3.0"
+    },
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "WuriN7i\\PayPalSDK\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Wuri Nugrahadi",
+            "email": "wuri.nugrahadi@gmail.com"
+        }
+    ]
+}
