@@ -15,7 +15,7 @@ class CreateOrder extends Request implements HasBody
     protected Method $method = Method::POST;
 
     public function __construct (
-        public readonly ?CheckoutOrder $data = null
+        public readonly CheckoutOrder|array|null $data = null
     ) {
         //
     }
@@ -27,6 +27,7 @@ class CreateOrder extends Request implements HasBody
 
     public function defaultBody(): array
     {
-        return $this->data->toArray();
+        $data = ($this->data instanceof CheckoutOrder) ? $this->data->toArray() : $this->data;
+        return $data ?? [];
     }
 }
